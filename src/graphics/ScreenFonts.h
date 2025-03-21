@@ -16,6 +16,10 @@
 #include "graphics/fonts/OLEDDisplayFontsCS.h"
 #endif
 
+#ifdef OLED_KO
+#include "graphics/fonts/OLEDDisplayFontsKO.h"
+#endif
+
 #ifdef OLED_PL
 #define FONT_SMALL_LOCAL ArialMT_Plain_10_PL
 #else
@@ -28,7 +32,11 @@
 #ifdef OLED_CS
 #define FONT_SMALL_LOCAL ArialMT_Plain_10_CS
 #else
+#ifdef OLED_KO
+#define FONT_SMALL_LOCAL ArialMT_Plain_10_KO
+#else
 #define FONT_SMALL_LOCAL ArialMT_Plain_10 // Height: 13
+#endif
 #endif
 #endif
 #endif
@@ -42,7 +50,11 @@
 #ifdef OLED_CS
 #define FONT_MEDIUM_LOCAL ArialMT_Plain_16_CS
 #else
+#ifdef OLED_KO
+#define FONT_MEDIUM_LOCAL ArialMT_Plain_16_KO
+#else
 #define FONT_MEDIUM_LOCAL ArialMT_Plain_16 // Height: 19
+#endif
 #endif
 #endif
 #endif
@@ -55,7 +67,11 @@
 #ifdef OLED_CS
 #define FONT_LARGE_LOCAL ArialMT_Plain_24_CS // Height: 28
 #else
+#ifdef OLED_KO
+#define FONT_LARGE_LOCAL ArialMT_Plain_24_KO // Height: 28
+#else
 #define FONT_LARGE_LOCAL ArialMT_Plain_24 // Height: 28
+#endif
 #endif
 #endif
 #endif
